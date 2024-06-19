@@ -48,7 +48,7 @@ def sign_up():
            flash('Username is too short.', category='error')
        elif password1 and len(password1) < 7:
            flash('Password is too short.', category='error')
-       elif email is None or len(email) < 4:  # Add this condition
+       elif email is None or len(email) < 4: 
            flash("Email is invalid.", category='error')
        else:
            new_user = User(email=email, username=username, password=generate_password_hash(password1))
